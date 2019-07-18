@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>二叉树中序遍历的非递归算法 | 32de18</title>
+  <title>32de18</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、非递归算法分析过程 二、算法实现1.非递归算法实现123456789101112131415161718void InOrder2(BiTree T)&amp;#123;    //二叉树中序遍历的非递归算法，算法需要借助一个栈    InitStack(S); BiTree p=T;  //初始化栈；p是遍历指针    while(p||!IsEmpty(S))      //栈不空或p不空时循环">
-<meta name="keywords" content="算法,二叉树排序,C语言">
+  <meta name="description" content="hello world">
+<meta name="keywords" content="32de18,C,C++,java,数据结构,考研">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树中序遍历的非递归算法">
-<meta property="og:url" content="http://yoursite.com/2019/07/18/中序遍历的非递归算法/index.html">
+<meta property="og:title" content="32de18">
+<meta property="og:url" content="http://yoursite.com/2019/07/17/hello-world/index.html">
 <meta property="og:site_name" content="32de18">
-<meta property="og:description" content="一、非递归算法分析过程 二、算法实现1.非递归算法实现123456789101112131415161718void InOrder2(BiTree T)&amp;#123;    //二叉树中序遍历的非递归算法，算法需要借助一个栈    InitStack(S); BiTree p=T;  //初始化栈；p是遍历指针    while(p||!IsEmpty(S))      //栈不空或p不空时循环">
+<meta property="og:description" content="hello world">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86.jpg">
-<meta property="og:updated_time" content="2019-07-18T16:36:41.900Z">
+<meta property="og:updated_time" content="2019-07-17T16:10:33.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树中序遍历的非递归算法">
-<meta name="twitter:description" content="一、非递归算法分析过程 二、算法实现1.非递归算法实现123456789101112131415161718void InOrder2(BiTree T)&amp;#123;    //二叉树中序遍历的非递归算法，算法需要借助一个栈    InitStack(S); BiTree p=T;  //初始化栈；p是遍历指针    while(p||!IsEmpty(S))      //栈不空或p不空时循环">
-<meta name="twitter:image" content="http://yoursite.com/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86.jpg">
+<meta name="twitter:title" content="32de18">
+<meta name="twitter:description" content="hello world">
   
     <link rel="alternative" href="/atom.xml" title="32de18" type="application/atom+xml">
   
@@ -157,32 +155,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-中序遍历的非递归算法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      二叉树中序遍历的非递归算法
-    </h1>
-  
-
-        
-        <a href="/2019/07/18/中序遍历的非递归算法/" class="archive-article-date">
-  	<time datetime="2019-07-18T14:13:10.749Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="一、非递归算法分析过程"><a href="#一、非递归算法分析过程" class="headerlink" title="一、非递归算法分析过程"></a><strong>一、非递归算法分析过程</strong></h2><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86.jpg" alt="分析过程"></p>
-<h2 id="二、算法实现"><a href="#二、算法实现" class="headerlink" title="二、算法实现"></a><strong>二、算法实现</strong></h2><h3 id="1-非递归算法实现"><a href="#1-非递归算法实现" class="headerlink" title="1.非递归算法实现"></a>1.非递归算法实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrder2</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//二叉树中序遍历的非递归算法，算法需要借助一个栈</span></span><br><span class="line">    InitStack(S); BiTree p=T;  <span class="comment">//初始化栈；p是遍历指针</span></span><br><span class="line">    <span class="keyword">while</span>(p||!IsEmpty(S))      <span class="comment">//栈不空或p不空时循环</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(p)                   <span class="comment">//根指针进栈，遍历左子树</span></span><br><span class="line">        &#123;</span><br><span class="line">            push(S,p);          <span class="comment">//每遇到非空二叉树先向左走</span></span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>                    <span class="comment">//根指针退栈，访问根节点，遍历右子树</span></span><br><span class="line">        &#123;</span><br><span class="line">            PoP(S,p);visit(p);  <span class="comment">//退栈，访问根节点</span></span><br><span class="line">            p=p-&gt;rchild;        <span class="comment">//再向右子树走</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>hello world</p>
+<a id="more"></a>
+<hr>
+<h2 id="title-Hello-World"><a href="#title-Hello-World" class="headerlink" title="title: Hello World"></a>title: Hello World</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-递归算法实现"><a href="#2-递归算法实现" class="headerlink" title="2.递归算法实现"></a>2.递归算法实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrder</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrder(T-&gt;lchild);     <span class="comment">//递归建立左子树</span></span><br><span class="line">        visit(T);               <span class="comment">//访问根节点</span></span><br><span class="line">        InOrder(T-&gt;rchild);     <span class="comment">//递归建立右子树</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
 
@@ -222,25 +215,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二叉树排序</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -291,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/18/中序遍历的非递归算法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/17/hello-world/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,11 +279,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2019/07/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
+    <a href="/2019/07/18/中序遍历的非递归算法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          二叉树中序遍历的非递归算法
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -334,7 +312,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、非递归算法分析过程"><span class="toc-number">1.</span> <span class="toc-text">一、非递归算法分析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、算法实现"><span class="toc-number">2.</span> <span class="toc-text">二、算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-非递归算法实现"><span class="toc-number">2.1.</span> <span class="toc-text">1.非递归算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-递归算法实现"><span class="toc-number">2.2.</span> <span class="toc-text">2.递归算法实现</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-Hello-World"><span class="toc-number">1.</span> <span class="toc-text">title: Hello World</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">2.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">2.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">2.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">2.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">2.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

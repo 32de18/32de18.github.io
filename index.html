@@ -159,9 +159,96 @@
     <article id="post-中序遍历的非递归算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/18/中序遍历的非递归算法/">二叉树中序遍历的非递归算法</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/18/中序遍历的非递归算法/" class="archive-article-date">
+  	<time datetime="2019-07-18T14:13:10.749Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="二叉树中序遍历的非递归算法"><a href="#二叉树中序遍历的非递归算法" class="headerlink" title="二叉树中序遍历的非递归算法"></a>二叉树中序遍历的非递归算法</h1>
+        <a id="more"></a>
+<h2 id="一、非递归算法分析过程"><a href="#一、非递归算法分析过程" class="headerlink" title="一、非递归算法分析过程"></a><strong>一、非递归算法分析过程</strong></h2><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86.jpg" alt="分析过程"></p>
+<h2 id="二、算法实现"><a href="#二、算法实现" class="headerlink" title="二、算法实现"></a><strong>二、算法实现</strong></h2><h3 id="1-非递归算法实现"><a href="#1-非递归算法实现" class="headerlink" title="1.非递归算法实现"></a>1.非递归算法实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrder2</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//二叉树中序遍历的非递归算法，算法需要借助一个栈</span></span><br><span class="line">    InitStack(S); BiTree p=T;  <span class="comment">//初始化栈；p是遍历指针</span></span><br><span class="line">    <span class="keyword">while</span>(p||!IsEmpty(S))      <span class="comment">//栈不空或p不空时循环</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(p)                   <span class="comment">//根指针进栈，遍历左子树</span></span><br><span class="line">        &#123;</span><br><span class="line">            push(S,p);          <span class="comment">//每遇到非空二叉树先向左走</span></span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>                    <span class="comment">//根指针退栈，访问根节点，遍历右子树</span></span><br><span class="line">        &#123;</span><br><span class="line">            PoP(S,p);visit(p);  <span class="comment">//退栈，访问根节点</span></span><br><span class="line">            p=p-&gt;rchild;        <span class="comment">//再向右子树走</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-递归算法实现"><a href="#2-递归算法实现" class="headerlink" title="2.递归算法实现"></a>2.递归算法实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrder</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrder(T-&gt;lchild);     <span class="comment">//递归建立左子树</span></span><br><span class="line">        visit(T);               <span class="comment">//访问根节点</span></span><br><span class="line">        InOrder(T-&gt;rchild);     <span class="comment">//递归建立右子树</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二叉树排序</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/18/中序遍历的非递归算法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>hello world</p>
         
       
 
@@ -174,7 +261,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/18/中序遍历的非递归算法/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/17/hello-world/">展开全文 >></a>
         </p>
       
 
@@ -298,6 +385,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">二叉树排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
