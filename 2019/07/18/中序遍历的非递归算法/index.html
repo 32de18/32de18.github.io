@@ -17,7 +17,7 @@
 <meta property="og:description" content="一、非递归算法分析过程">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86.jpg">
-<meta property="og:updated_time" content="2019-07-19T05:29:48.168Z">
+<meta property="og:updated_time" content="2019-07-19T15:48:06.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树中序遍历的非递归算法">
 <meta name="twitter:description" content="一、非递归算法分析过程">
@@ -183,6 +183,7 @@
 
 <h3 id="2-递归算法实现"><a href="#2-递归算法实现" class="headerlink" title="2.递归算法实现"></a>2.递归算法实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrder</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        InOrder(T-&gt;lchild);     <span class="comment">//递归建立左子树</span></span><br><span class="line">        visit(T);               <span class="comment">//访问根节点</span></span><br><span class="line">        InOrder(T-&gt;rchild);     <span class="comment">//递归建立右子树</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>此人写的很好 <a href="https://www.cnblogs.com/llhthinker/p/4747962.html" target="_blank" rel="noopener">点这里</a></p>
 
       
 
